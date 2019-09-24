@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="main.js"></script>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <h1 class="navbar-brand">Ticket System</h1>
+        </nav>
+    </div>
+    <form id="test" action="#" method="POST">
+        <div class="container">
+        <div class="jumbotron" style="margin-top: 1em">
+            <div class="form-group">
+                <label for="Verfasser">Verfasser</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Titel" required>Titel</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="prio">Priorität</label>
+                    <select id="ticketPrioInput" class="form-control">
+                    <option value="Low">hoch</option>
+                    <option value="Medium">mittel</option>
+                    <option value="High">niedrig</option>
+                </select>
+                
+
+                <div class="form-group">
+                    <label for="Beschreibung" style="margin-top: 1em">Beschreibung</label>
+                    <textarea class="form-control" style="margin-bottom: 1em" required></textarea>
+                    <button type="submit" class="btn btn-primary">Erstellen</button>
+                </div>
+
+
+    </form>
+</div>
+    <div id="ticketListe">
+    </div>
+    </div>
+
+    <pre id="output"></pre>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
