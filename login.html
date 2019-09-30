@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <div class="well well-lg" style="background-color: rgb(219, 240, 250);">
+
+        <title>Ticketsystem</title>
+<body>
+    <div class="container">
+        <main class="jumbotron" style="background-color: rgb(219, 240, 250)">
+            <h1 class="well text-center">Ticketsystem</h1>
+            <h2 class="well text-center">Bitte melden Sie sich mit Ihren Benutzerdaten an.</h2>
+            <div class="container">
+                <main class="jumbotron" class="well text-center">
+                    <br>
+
+                    <p>Benutzername:</p><input type="text" class="form-control" placeholder="Benutzername" id="bn"><br>
+                    <p>Passwort:</p><input type="password" class="form-control" placeholder=" Passwort" id="pw" required
+                        autocomplete="off">
+                    <input type="checkbox" onclick="passwortAnzeigen()">Passwort anzeigen
+                    <br>
+                    <br>
+                    <button onclick="anmelden()">Anmelden</button>
+                    <p id="demo"></p>
+                    <script>
+
+                        function anmelden() {
+                            var ben = "wwi2018d";
+                            var pass = "dhbw";
+
+                            if (ben == document.getElementById("bn").value && pass == document.getElementById("pw").value) {
+                                window.location.href = 'index.html';
+                                return true;
+                            }
+                            else {
+                                alert("Benutzername oder Passwort falsch.")
+                            }
+
+                        }
+
+                        function passwortAnzeigen() {
+                            var x = document.getElementById("pw");
+                            if (x.type === "password") {
+                                x.type = "text";
+                            } else {
+                                x.type = "password";
+                            }
+                        }
+
+                    </script>
+
+            </div>
+
+        </main>
+    </div>
+    <footer>
+
+        <p style="text-align:right">© 2019 by dhbw</p>
+    </footer>
+</body>
+</head>
+
+</html>
