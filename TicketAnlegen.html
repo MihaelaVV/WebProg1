@@ -2,59 +2,82 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="indexstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Ticket System </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body>
-    <script src="main.js"></script>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <h1 class="navbar-brand">Ticket System</h1>
-        </nav>
+
+<body onclick="auflisten()" style="background: url('https://image.freepik.com/free-vector/blue-light-sparkles-background-with-copyspace_1017-20091.jpg');background-size: 100% 100%;">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  <!-- aus Bootstrap entnommen-->
+    <a class="navbar-brand" href="startseite.html">Startseite</a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Ticket anlegen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="anzeigen.html">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="container" >
+    <h1 style="color:white">Ticket erstellen</h1>
+    <div  !important class="jumbotron">
+      <h3>Neues Ticket hinzufügen:</h3>
+      <form action="anzeigen.html" method="GET"  id="ticketHTMLForm">
+
+        <div class="form-group">
+          <label for="ticketVerfasserInput">Verfasser</label>
+          <input type="text" class="form-control" name= "verfasser" id="ticketVerfasserInput" placeholder="Verfasser" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="ticketTitelInput" >Titel</label>
+          <input type="text" class="form-control" id="ticketTitelInput" placeholder="Titel" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="tBeschreibung">Beschreibung</label>
+          <textarea class="form-control"  id="tBeschreibungInput" style="margin-bottom: 1em" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="ticketDatumInput">Erstellungsdatum</label>
+          <input type="text" class="form-control"  id="ticketDatumInput" placeholder="Datumformat tt.mm.jjjj" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="ticketPrioInput" >Priorität</label>
+          <select id="ticketPrioInput" class="form-control">
+            <option value="High">hoch</option>
+            <option value="Medium">mittel</option>
+            <option value="Low">niedrig</option>
+          </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Erstellen</button>
+      </form>
     </div>
-    <form id="test" action="#" method="POST">
-        <div class="container">
-        <div class="jumbotron" style="margin-top: 1em">
-            <div class="form-group">
-                <label for="Verfasser">Verfasser</label>
-                <input type="text" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="Titel" required>Titel</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="prio">Priorität</label>
-                    <select id="ticketPrioInput" class="form-control">
-                    <option value="Low">hoch</option>
-                    <option value="Medium">mittel</option>
-                    <option value="High">niedrig</option>
-                </select>
-                
-
-                <div class="form-group">
-                    <label for="Beschreibung" style="margin-top: 1em">Beschreibung</label>
-                    <textarea class="form-control" style="margin-bottom: 1em" required></textarea>
-                    <button type="submit" class="btn btn-primary">Erstellen</button>
-                </div>
-
-
-    </form>
-</div>
-    <div id="ticketListe">
+    <div class="col-lg-12">
+      <div id="ticketListe">
+      </div>
     </div>
-    </div>
-
-    <pre id="output"></pre>
-    <script src="http://chancejs.com/chance.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+  </div>
+  <script src="http://chancejs.com/chance.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
