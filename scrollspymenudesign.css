@@ -1,0 +1,95 @@
+body {
+    position: relative;
+    color: black
+}
+
+#section1 {
+    padding-top: 50px;
+    height: 720px;
+    color: #fff;
+    background-color: #a6a6a6;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#section2 {
+    padding-top: 50px;
+    height: 720px;
+    color: #fff;
+    background-image: url("https://images.pond5.com/abstract-geometric-background-moving-lines-footage-076267054_prevstill.jpeg");
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+    background-size: 100% 100%;
+}
+
+#section3 {
+    padding-top: 50px;
+    height: 720px;
+    color: #fff;
+    background-image: url("https://i0.wp.com/pakish.pk/wp-content/uploads/2018/05/website-login-background.jpg?ssl=1");
+    image-rendering: crisp-edges;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#section41 {
+    padding-top: 50px;
+    height: 720px;
+    color: #fff;
+    background-image: url("https://wallpaperbro.com/img/489793.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#section42 {
+    padding-top: 50px;
+    height: 720px;
+    color: #fff;
+    background-image: url("https://img.freepik.com/vektoren-kostenlos/stilvolle-sechseckige-linie-musterhintergrund_1017-19742.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    margin-bottom: auto;
+    image-rendering: crisp-edges;
+    border-style: none;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+input[type="password"] {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+input[type="checkbox"] {
+    display: block;
+    margin: 5px auto;
+}
+
+#bn {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    border-bottom-color: white;
+}
+
+#pw {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    border-bottom-color: white;
+}
