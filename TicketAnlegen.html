@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="indexstyle.css">
+
+  <link rel="stylesheet" href="scrollspymenudesign.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Ticket System </title>
@@ -22,31 +23,35 @@
   </nav>
 
 
-  <div class="container" >
-    <h1 style="color:white">Ticket erstellen</h1>
-    <div  !important class="jumbotron">
+  <div class="container" style="text-align: center;">
+    <div style="background-color: transparent;" !important class="jumbotron"> 
       <h3>Neues Ticket hinzufügen:</h3>
       <form action="anzeigen.html" method="GET"  id="ticketHTMLForm">
 
         <div class="form-group">
-          <label for="ticketVerfasserInput">Verfasser</label>
-          <input type="text" class="form-control" name= "verfasser" id="ticketVerfasserInput" placeholder="Verfasser" autocomplete="off">
+          <input type="text"  name= "verfasser" id="ticketVerfasserInput" placeholder="Verfasser" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
         </div>
         <div class="form-group">
-          <label for="ticketTitelInput" >Titel</label>
-          <input type="text" class="form-control" id="ticketTitelInput" placeholder="Titel" autocomplete="off">
+          <input type="text" id="ticketTitelInput" placeholder="Titel" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
         </div>
         <div class="form-group">
-          <label for="tBeschreibung">Beschreibung</label>
-          <textarea class="form-control"  id="tBeschreibungInput" style="margin-bottom: 1em" required></textarea>
+          <textarea  id="tBeschreibungInput" style="margin-bottom: 1em" required placeholder="Beschreibung" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;"></textarea>
         </div>
         <div class="form-group">
-          <label for="ticketDatumInput">Erstellungsdatum</label>
-          <input type="text" class="form-control"  id="ticketDatumInput" placeholder="Datumformat tt.mm.jjjj" autocomplete="off">
+          <input type="text"   id="ticketDatumInput" placeholder="Erstellungsdatum *Datumformat tt.mm.jjjj*" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
         </div>
         <div class="form-group">
-          <label for="ticketPrioInput" >Priorität</label>
-          <select id="ticketPrioInput" class="form-control">
+          <select id="ticketPrioInput" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
             <option value="High">hoch</option>
             <option value="Medium">mittel</option>
             <option value="Low">niedrig</option>
@@ -54,7 +59,7 @@
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Erstellen</button>
+        <button type="submit" id="button">Erstellen</button>
       </form>
     </div>
     <div class="col-lg-12">
