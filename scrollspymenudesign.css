@@ -1,6 +1,13 @@
 body {
     position: relative;
-    color: black
+    background-color:  #a6a6a6;
+    background-size: 100% 100%;
+}
+#editTicket {
+    text-align: center;
+}
+#editTicket, #submitTicket {
+    display: none;
 }
 
 #section1 {
@@ -32,20 +39,11 @@ body {
     background-size: 100% 100%;
 }
 
-#section41 {
+#section4 {
     padding-top: 50px;
     height: 720px;
     color: #fff;
-    background-image: url("http://zcode.io/sites/default/files/news/boostrap_img.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-#section42 {
-    padding-top: 50px;
-    height: 720px;
-    color: #fff;
-    background-image: url("https://img.freepik.com/vektoren-kostenlos/stilvolle-sechseckige-linie-musterhintergrund_1017-19742.jpg?size=626&ext=jpg");
+    background-color: #a6a6a6;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -106,7 +104,7 @@ input[type="checkbox"] {
     border-bottom-color: white;
 }
 
-#button {
+#button, .button {
     background-color: transparent;
     -moz-border-radius: 26px;
     -webkit-border-radius: 26px;
@@ -141,3 +139,52 @@ input[type="checkbox"] {
     position: relative;
     top: 1px;
 }
+#btnAbbrechen {
+    background-color: transparent;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 26px;
+    border: 1px solid #ebedea;
+    
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 16px;
+    padding: 21px 31px;
+   
+    margin: auto;
+    display: block;
+    
+}
+
+#btnAbbrechen:hover {
+    background-color: transparent;
+}
+
+#btnAbbrechen:active {
+    position: relative;
+    top: 1px;
+}
+
+#btnAbbrechen:hover {
+    background-color: transparent;
+}
+
+#btnAbbrechen:active {
+    position: relative;
+    top: 1px;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+ 
+  .fa-facebook {
+    
+    color: white;
+  }
+  
