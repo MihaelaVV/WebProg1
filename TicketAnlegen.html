@@ -14,22 +14,71 @@
 </head>
 
 
-<body onclick="auflisten()" style="background-color:  #a6a6a6;background-size: 100% 100%;">
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">  <!-- aus Bootstrap entnommen-->
-    <a class="navbar-brand" href="probe.html">Startseite</a>
+<body  style="background-color:  #a6a6a6;background-size: 100% 100%;">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
     <ul class="navbar-nav">
       
     </ul>
   </nav>
 
+  <div>
+    <button id="addTicketsBtn" class="button">Hinzuf&uuml;gen</button>
+    <button id="listTicketsBtn" class="button" >Tickets anzeigen</button>
+  </div>
 
-  <div class="container" style="text-align: center;">
-    <div style="background-color: transparent;" !important class="jumbotron"> 
-      <h3>Neues Ticket hinzufügen:</h3>
-      <form  method="GET"  id="ticketHTMLForm">
+
+  <div class="container" id="editTicket">
+   
+
+    <form action="" id="editTicketForm">
+        
+        <div class="form-group">
+          <input type="text" name="verfasser" id="editTicketVerfasser" required placeholder="Verfasser" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
+        </div>
+        <div class="form-group">
+          <input type="text" id="editTicketTitel" placeholder="Titel" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
+        </div>
+        <div class="form-group">
+          <textarea  id="editTicketBeschr" style="margin-bottom: 1em" required placeholder="Beschreibung" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="date"   id="editTicketDatum" placeholder="Erstellungsdatum *Datumformat tt.mm.jjjj*" autocomplete="off" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
+        </div>
+        <div class="form-group">
+          <select id="editTicketPrio" style="background-color: transparent; border: none;
+          border-bottom: 1px solid;
+          border-bottom-color: white;">
+            <option value="Hoch">Hoch</option>
+            <option value="Mittel">Mittel</option>
+            <option value="Niedrig">Niedrig</option>
+          </select>
+        </div>
+
+        <input id="editedTicketId" type="hidden"></input>
+        <input id="editTicketStatus" type="hidden"></input>
+
+        <button type="submit" class="button" id="saveTicketBtn">Speichern</button>
+          
+      </form>
+  
+  </div>
+
+  
+  <div class="container" id="submitTicket" style="text-align: center;">
+    <div style="background-color: transparent !important;" class="jumbotron"> 
+      <h3>Neues Ticket hinzuf&uuml;gen:</h3>
+      <form action="" id="ticketHTMLForm">
 
         <div class="form-group">
-          <input type="text"  name= "verfasser" id="ticketVerfasserInput" placeholder="Verfasser" autocomplete="off" style="background-color: transparent; border: none;
+          <input type="text" name="verfasser" id="ticketVerfasserInput" placeholder="Verfasser" autocomplete="off" style="background-color: transparent; border: none;
           border-bottom: 1px solid;
           border-bottom-color: white;">
         </div>
@@ -44,7 +93,7 @@
           border-bottom-color: white;"></textarea>
         </div>
         <div class="form-group">
-          <input type="text"   id="ticketDatumInput" placeholder="Erstellungsdatum *Datumformat tt.mm.jjjj*" autocomplete="off" style="background-color: transparent; border: none;
+          <input type="date"   id="ticketDatumInput" placeholder="Erstellungsdatum *Datumformat tt.mm.jjjj*" autocomplete="off" style="background-color: transparent; border: none;
           border-bottom: 1px solid;
           border-bottom-color: white;">
         </div>
@@ -52,22 +101,23 @@
           <select id="ticketPrioInput" style="background-color: transparent; border: none;
           border-bottom: 1px solid;
           border-bottom-color: white;">
-            <option value="High">hoch</option>
-            <option value="Medium">mittel</option>
-            <option value="Low">niedrig</option>
+            <option value="Hoch">hoch</option>
+            <option value="Mittel">mittel</option>
+            <option value="Niedrig">niedrig</option>
           </select>
         </div>
 
 
-        <button type="submit" id="button">Erstellen</button>
+        <button type="submit" class="button" id="addTicketButton">Erstellen</button>
+          
       </form>
     </div>
-    <div class="col-lg-12">
-      <div id="ticketListe">
-      </div>
-    </div>
   </div>
-  <script src="http://chancejs.com/chance.min.js"></script>
+
+    <div id="ticketListe" class="col-lg-12">
+    </div>
+
+
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
