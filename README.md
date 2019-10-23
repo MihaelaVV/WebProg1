@@ -13,6 +13,8 @@ Die Anwendung verfügt über die einzelnen CRUD-Operationen.
 5. express install
 6. npm start
 7. go to http://localhost:3000
+8. Username : wwi2018d
+9. Password : dhbw
 
 # Architektur
 
