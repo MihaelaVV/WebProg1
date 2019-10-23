@@ -20,8 +20,7 @@ Die Anwendung verfügt über die einzelnen CRUD-Operationen.
 
 Es handelt sich um eine HTML-CSS-JS Anwendung.   
 Das FrontEnd und das BackEnd interagieren miteinanders mittels Fetch API.    
-Die HTML-Struktur der Webseite kommuniziert mit entsprechenden CSS-Dateien, um ein vernünftiges Design darzustellen.  
-Es handelt sich um eine sehr einfache SPA.      
+Die HTML-Struktur der Webseite kommuniziert mit entsprechenden CSS-Dateien, um ein vernünftiges Design darzustellen.       
 
 
 # Datenmodell
